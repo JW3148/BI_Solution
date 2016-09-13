@@ -1,0 +1,42 @@
+ETL design
+
+
+Target Source Mapping
+
+Star Schema
+Snowflake
+
+Create Fact 
+-granularity, keys
+-data type
+
+Dimensions
+-SCD
+
+ETL
+
+flat file --> staging -(views)-> DWH
+
+incremental loading
+-checksum
+-timestamp
+-join(update match, instert unmatch) --SQL merge
+
+
+Load Dimensions
+-extract through views on OLTP/staging
+-SCD implementation
+-MDM maintain dimension
+-Late arriving dimension implementation
+
+Load Fact
+-extract through staging
+-dimension lookup
+-late arriving dimension
+
+indexing strategy
+performance
+Partitioning
+Partition switch
+Column Store
+
