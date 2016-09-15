@@ -1,0 +1,12 @@
+if fast load, then the data is load by batch(rather then row by row)
+
+fast load = batch load
+
+the problem with redirect error record in batch load is that
+the whole batch will be redirect if it contains an error row.
+
+solution:
+
+FAST OLEDB destination --> (redirect error) --> 
+ROW BY ROW OLEDB same destinatoin --> (redirect error) --> 
+error destination
