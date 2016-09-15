@@ -1,0 +1,20 @@
+Audit 
+
+DimAudit (Optional)  --enable user to identify the excution instance that loads a particular row, therefore can back the record out
+Audit table
+
+Package Execution Instance
+  instance ID
+  parent instance ID
+  start time
+  end time
+  success or not
+  
+
+Row Count
+ before/after -- Execute SQL task, select count() from tableX
+ insert/update  --row cound transformation in DFT. 
+ how to audit update?
+ 
+ 
+Error
