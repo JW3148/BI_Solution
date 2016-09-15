@@ -1,12 +1,13 @@
 ETL design
 
 
-Target Source Mapping
+Target Source Mapping  --> EXCEL
 
-Star Schema
+Star Schema  --> Go
 Snowflake
 
 Create Fact 
+-source table in OLTP
 -granularity, keys
 -data type
 
@@ -39,4 +40,16 @@ performance
 Partitioning
 Partition switch
 Column Store
+
+---------------------------------------------------
+tech specifications
+SSIS extract to staging, then load dimension, then fact
+Surrogate key pipeline(SQL or Lookup trans)
+SCD(SQL or SSIS:SCD trans)
+FACT incremental loading(SQL or SSIS) ---> check common practice???
+Late Arriving Dimension(SQL)
+Audit(Audit Dimenstion)
+SSIS design(one package per table, Master-Child package)
+Error handling(SQL to log run time error to db, unmatch in sarrogate key pipe line)
+Indexing   --> check out common practice???
 
