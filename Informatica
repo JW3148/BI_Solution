@@ -1,0 +1,16 @@
+session   --> a task associated with a mapping to define the connections and other configurations for that mapping
+  like DFT in SSIS?
+  contains mapping
+workflow  --> control flow
+mapplet   --> transformations
+mapping   --> source ,target, mapplet
+task
+worklet: a series of tasks
+
+
+
+workflow > worklet;session > mapping > mapplet
+
+
+input file
+trigger file
