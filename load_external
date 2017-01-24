@@ -1,0 +1,4 @@
+for loop container to load all relevent files
+Data flow task to load from source to target
+  flat file connection. CSV file. Tab Delimited
+Derived column to add a column name
