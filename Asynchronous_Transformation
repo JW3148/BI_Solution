@@ -1,0 +1,10 @@
+Synchronous transformations are those components which process each row and push down to the next component/destination, 
+it uses allocated buffer memory and doesn’t require additional memory as it is direct relation between input/output 
+data row which fits completely into allocated memory. Components like Lookup, Derived Columns, and Data Conversion etc. 
+fall into this category.
+
+Asynchronous transformations are those components which first store data into buffer memory then process operations 
+like Sort and Aggregate. Additional buffer memory is required to complete the task and until the buffer memory is available 
+it holds up the entire data in memory and blocks the transaction, also known as blocking transformation. 
+To complete the task SSIS engine (data flow pipeline engine) will allocate extra buffer memory, 
+which is again an overhead to the ETL system. Components like Sort, Aggregate, Merge, Join, etc. fall into this category.
