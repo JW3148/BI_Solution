@@ -1,0 +1,35 @@
+Execute SQL Task
+
+Mapping Variables
+
+EXEC ? = dbo.usp_XXX ?, ? OUTPUT, ? OUTPUT
+     0               1  2         3
+    output          in  out       out
+
+SELECT ? = 'success'
+       0 --output
+
+
+key concepts
+-Direction: Input or output
+-ParameterName: 0, 1,2,3  --base on the position of the parameter
+
+
+
+another way to assign output of a query/sp is using resultset
+
+key concepts
+-resultSet: None, SingleRow, FullResultset, XML
+-choose singleRow if want to map to a single value to a variable
+-choose full resultset if want to assgin to a variable of object type
+SELECT 'success' AS STATUS
+
+In Result Set tab {Result Name: STATUS, VariableName: User::xyz}
+
+
+
+Input variables in Dataflow OLEDB source task
+
+EXEC usp_GetQueuedAccountsData_Flat  @SentinalSrvr=?,@IID=?
+
+position: parameter0
